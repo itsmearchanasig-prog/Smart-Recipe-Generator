@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Archana's AI Chef</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1>👩‍🍳 AI Smart Recipe Generator</h1>
+        
+        <div class="input-group">
+            <label>Please type Ingredients:</label>
+            <input type="text" id="ingredients" placeholder="e.g. Aloo, Paneer, Matar">
+        </div>
+
+        <button id="btn">Click here for Recipe!</button>
+
+        <div id="output" class="recipe-display">
+           Lets see your recipe here...
+        </div>
+
+        <div class="input-group">
+            <label>How much time do you have?</label>
+            <select id="timeLimit">
+                <option value="10 mins">Quick one (10 mins)</option>
+                <option value="30 mins">The Chill Mode (30 mins)</option>
+                <option value="1 hour">Special Occasion (1 hour)</option>
+            </select>
+       </div>
+
+        <div class="input-group">
+            <label>Choose your meal type</label>
+            <select id="cuisineType">
+                <option value="Indian">Desi Indian</option>
+                <option value="Chinese">Chatpata Chinese</option>
+                <option value="Italian">Cheese wala Italian</option>
+            </select>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

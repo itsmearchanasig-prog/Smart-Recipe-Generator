@@ -1,0 +1,135 @@
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+.recipe-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff9db;
+    border-left: 5px solid #fab005;
+    text-align: left;
+    min-height: 50px;
+} */
+
+
+
+
+/* --- body styling, ye purana hi rehne do --- */
+body {
+    font-family: 'Poppins', sans-serif; /* Agar change nahi hua toh ye add karo */
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+/* --- THE MAIN CARD (Ismein space barhayenge) --- */
+.card {
+    background: white;
+    padding: 40px 30px; /* Padding barha di */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 450px; /* Thoda barha diya width */
+    text-align: center;
+}
+
+/* --- SABSE IMPORTANT: Har section ke beech mein gap --- */
+.input-group {
+    margin-bottom: 25px; /* In dono sectional gaps ko barha diya */
+    text-align: left; /* Labels ko left align rakhein */
+}
+
+h1 {
+    margin-bottom: 35px; /* Title ke niche space */
+}
+
+/* --- Title Emojis styling, options ko card mein align karne ke liye --- */
+label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* --- Har Input aur Select ko professional dikhane ke liye --- */
+input[type="text"], select {
+    width: 100%; /* Full width in container */
+    padding: 15px; /* Thoda barha padding */
+    font-size: 16px;
+    border: 2px solid #eee; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box; /* Padding height/width add karega */
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #ff4757; /* Highlight color on focus */
+    outline: none;
+}
+
+/* --- THE RED BUTTON (Margin barha diya) --- */
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Full width button */
+    margin-top: 10px; /* Thoda space recipe box se */
+    margin-bottom: 20px; /* Space niche dropdowns se */
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+/* --- THE YELLOW RECIPE BOX --- */
+.recipe-display {
+    margin-top: 10px; /* Space upar button se */
+    margin-bottom: 25px; /* Space niche options se */
+    padding: 25px;
+    background: #fff9db;
+    border-left: 6px solid #fab005;
+    border-radius: 10px;
+    text-align: left;
+    
+}
+
