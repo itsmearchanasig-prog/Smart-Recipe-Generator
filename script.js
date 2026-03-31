@@ -1,5 +1,5 @@
 // 1. Apni API Key yahan rakhein
-const API_KEY = "AIzaSyD2lL6dQL7Eh_iZZXXXRSuexsPAR4JjtZI"; 
+const API_KEY = "AIzaSyAp0gLf_ROw15Rf9DPMcafX-vdNqluM55Q"; 
 
 const btn = document.getElementById("btn");
 const output = document.getElementById("output");
@@ -28,7 +28,7 @@ btn.addEventListener("click", async () => {
     Add a 'Pro Tip' at the end.`;
 
     // 4. Ye hai wo API Call jo aapne pucha tha (Iska address dhyan se dekhiye)
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
     try {
         const response = await fetch(url, {
