@@ -31,13 +31,13 @@ btn.addEventListener("click", async () => {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
 
     try {
-        const response = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: promptText }] }]
-            })
-        });
+    const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            contents: [{ parts: [{ text: promptText }] }]
+        }) // Yahan bracket band hua
+    });
 
         const data = await response.json();
 
