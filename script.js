@@ -1,4 +1,4 @@
-// 1. Apni API Key yahan rakhein
+// 1. API Key 
 const API_KEY = "AIzaSyDrVGFg4fVySI6cuA4sFE2qFtRCUolGpn4"; 
 
 const btn = document.getElementById("btn");
@@ -7,7 +7,7 @@ const ingredientsInput = document.getElementById("ingredients");
 const timeLimit = document.getElementById("timeLimit");
 const cuisineType = document.getElementById("cuisineType");
 
-// 2. Button par click hone ka intezar karein
+// 2. waiting for button respons
 btn.addEventListener("click", async () => {
     const userIngredients = ingredientsInput.value;
     const selectedTime = timeLimit.value;
