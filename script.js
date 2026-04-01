@@ -1,5 +1,5 @@
 // 1. Apni API Key yahan rakhein
-const API_KEY = "AIzaSyAp0gLf_ROw15Rf9DPMcafX-vdNqluM55Q"; 
+const API_KEY = "AIzaSyBGGILVhjbSrDVC5QpY5F6WaGS-cG4ANk8"; 
 
 const btn = document.getElementById("btn");
 const output = document.getElementById("output");
