@@ -20,14 +20,14 @@ btn.addEventListener("click", async () => {
 
     output.innerHTML = "<b>Chef Archana Thinking... 🥣</b>";
 
-    // 3. AI ko batayein ki use 'Archana' ki tarah bindaas bolna hai
+    // 3.Tell the AI that it needs to speak in a 'bindaas' (carefree/bold) style.
     const promptText = `Hillooo, just chill. 
     User has ingredients: ${userIngredients}. 
     Time: ${selectedTime}, Cuisine: ${selectedCuisine}. 
     Give a short recipe in Hinglish (Hindi + English) in a very fun way. 
     Add a 'Pro Tip' at the end.`;
 
-    // 4. Ye hai wo API Call jo aapne pucha tha (Iska address dhyan se dekhiye)
+    // 4.his is the API call you asked for (look at its address carefully)
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
     try {
@@ -36,24 +36,24 @@ btn.addEventListener("click", async () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             contents: [{ parts: [{ text: promptText }] }]
-        }) // Yahan bracket band hua
+        }) // bracket closed
     });
 
         const data = await response.json();
 
-        // 5. Check karein ki data aaya ya nahi
+        // 5. Check whether the data has arrived or not
         if (data.candidates && data.candidates[0].content.parts[0].text) {
             let finalRecipe = data.candidates[0].content.parts[0].text;
-            // Recipe ko sundar dikhane ke liye Formatting
+            // Styling the recipe for a better look
             output.innerHTML = finalRecipe.replace(/\n/g, "<br>").replace(/\*\*/g, "");
         } else {
-            // Agar API ne koi error bheja (jaise Model Not Found)
+            // If the API sent an error (like 'Model Not Found')
             console.error("API Error:", data);
             output.innerText = "Oops! Google denied it. Errora. Error: " + (data.error ? data.error.message : "Try again");
         }
 
     } catch (error) {
-        // Agar internet band hai ya URL galat hai
+        // If the internet is down or the URL is incorrect.
         console.error("Network Error:", error);
         output.innerText = "Network's glitching, Please Check it!";
     }
